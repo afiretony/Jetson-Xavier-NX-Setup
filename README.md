@@ -1,4 +1,5 @@
 # Jetson-Xavier-NX-Setup
+
 This tutorial is about setting up Jetson-Xavier-NX.
 ---
 ## Part A installing Jetpack and 
