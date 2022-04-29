@@ -10,10 +10,14 @@ NVIDIA SDK Manager provides an end-to-end development environment setup solution
 ### Download Target OS and SDKs
 Jetsons use operating system named JetPack which is a ubuntu system image. Please select JetPack 4.6 [rev.3] as your target operating system, this version corresponds to Ubuntu 18.04 LTS (Bionic Beaver). Then, download all Jetson SDK components (CUDA, CUDA-X AI, Computer Vision and NVIDIA Container Runtime).
 
+![](fig/sdk1.png)
+
 ### Flash Jetson-Xavier-NX module
 This step flashes previous downloaded JetPack OS image onto Jetson-Xavier-NX and installs SDK components. Normally, Jetson-Xavier-NX has SD card with small storage (~16 GB) which is not enough for our development usage. You can attach a SSD card on the back of Jetson-Xavier-NX, and Jetson will use [NVMe](https://en.wikipedia.org/wiki/NVM_Express) (nonvolatile memory express) to access and transport data within it.
 
 **To flash OS image on SSD, connect jetson with a micro-B USB with your laptop, choose NVMe as your storage device instead of default SD card.**
+
+![](fig/sdk2.png)
 
 Troubleshoot:
 
@@ -62,6 +66,19 @@ Test run by
 roslaunch realsense2_camera rs_camrea.launch
 ```
 
+## Optional
+### Jetson stats
+jetson-stats is a package for monitoring and control your NVIDIA Jetson [Xavier NX, Nano, AGX Xavier, TX1, TX2] Works with all NVIDIA Jetson ecosystem.
+
+You can install by
+```
+sudo apt install python-pip
+sudo -H pip install -U jetson-stats
+```
+and run by
+```
+jtop
+```
 
 
 
